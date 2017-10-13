@@ -1,4 +1,10 @@
+
 form-builder drop-zone {
     display: block;
     flex: 1;
+
+    outline: 1px solid rgb(202, 202, 202);
+    color: #7f7f7f;
+    padding: .5rem;
+    text-align: center;
 }

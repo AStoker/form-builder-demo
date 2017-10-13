@@ -1,7 +1,14 @@
 form-builder element-type {
-    display: block;
+    display: flex;
+    height: 3rem;
+    align-items: center;
 
+    border: 1px solid gray;
+
+    .element-type__icon {
+        width: 3rem;
+    }
     .element-type__title {
-
+        flex: 1;
     }
 }

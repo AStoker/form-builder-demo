@@ -2,8 +2,12 @@
     <require from="./element-category.css"></require>
     <require from="./element-type/element-type"></require>
     
-    <h2 class="element-category__title">Type</h2>
+    <h2 class="element-category__title">
+        <slot>Type</slot>
+    </h2>
     <div class="element-category__list">
+        <element-type></element-type>
+        <element-type></element-type>
         <element-type></element-type>
     </div>
 

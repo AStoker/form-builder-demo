@@ -58,6 +58,11 @@
           "aurelia-templating",
           "aurelia-templating-binding",
           {
+            "name": "draggable",
+            "path": "../node_modules/@shopify/draggable/lib",
+            "main": "draggable"
+          },
+          {
             "name": "aurelia-templating-resources",
             "path": "../node_modules/aurelia-templating-resources/dist/amd",
             "main": "aurelia-templating-resources"
