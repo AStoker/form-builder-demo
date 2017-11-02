@@ -4,7 +4,7 @@
 
     <section class="element-categories__list">
             
-        <element-category>Text</element-category>
+        <element-category repeat.for="category of categories" category.bind="category"></element-category>
 
     </section>
 </template>

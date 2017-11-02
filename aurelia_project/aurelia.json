@@ -58,9 +58,9 @@
           "aurelia-templating",
           "aurelia-templating-binding",
           {
-            "name": "draggable",
+            "name": "Draggable",
             "path": "../node_modules/@shopify/draggable/lib",
-            "main": "draggable"
+            "main": "draggable.bundle"
           },
           {
             "name": "aurelia-templating-resources",

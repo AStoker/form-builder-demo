@@ -1,16 +1,19 @@
-import {Draggable} from 'draggable';
+import { bindable } from 'aurelia-framework';
+
 
 export class ElementTypeCustomElement {
     static inject = [Element];
+    @bindable elementType;
 
     constructor(element) {
         this._element = element;
-        this._draggable;
+        this.title = 'Element';
     }
     attached() {
-        this._draggable = new Draggable(this._element)
-            .on('drag:start', () => console.log('drag:start'))
-            .on('drag:move',  () => console.log('drag:move'))
-            .on('drag:stop',  () => console.log('drag:stop'));
+        //TODO: get draggable working in here
+    }
+
+    bind() {
+        this.title = this.elementType.type;
     }
 }

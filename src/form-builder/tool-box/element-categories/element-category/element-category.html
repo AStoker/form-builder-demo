@@ -3,12 +3,10 @@
     <require from="./element-type/element-type"></require>
     
     <h2 class="element-category__title">
-        <slot>Type</slot>
+        <div click.trigger="collapseCategory(category)">${category.type}</div>
     </h2>
     <div class="element-category__list">
-        <element-type></element-type>
-        <element-type></element-type>
-        <element-type></element-type>
+        <element-type repeat.for="element of elements" element-type.bind="element"></element-type>
     </div>
 
 </template>
