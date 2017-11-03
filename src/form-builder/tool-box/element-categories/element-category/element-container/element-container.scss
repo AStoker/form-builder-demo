@@ -1,14 +1,14 @@
-form-builder element-type {
+form-builder .element-container {
     display: flex;
     height: 3rem;
     align-items: center;
 
     border: 1px solid gray;
 
-    .element-type__icon {
+    .element-container__icon {
         width: 3rem;
     }
-    .element-type__title {
+    .element-container__title {
         flex: 1;
     }
 }

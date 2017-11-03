@@ -1,7 +1,8 @@
 import { bindable } from 'aurelia-framework';
 
+import {Droppable} from 'Draggable';
 
-export class ElementTypeCustomElement {
+export class ElementContainerCustomElement {
     static inject = [Element];
     @bindable elementType;
 
@@ -10,7 +11,7 @@ export class ElementTypeCustomElement {
         this.title = 'Element';
     }
     attached() {
-        //TODO: get draggable working in here
+        //this.configureDraggable();
     }
 
     bind() {

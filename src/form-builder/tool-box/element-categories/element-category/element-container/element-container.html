@@ -1,0 +1,22 @@
+<template class="drop-zone" >
+    <require from="./element-container.css"></require>
+
+    <section class="element-container">
+        <section class="element-container__icon">
+            <style>
+                .element-container__icon .triangle {
+                    width: 0;
+                    height: 0;
+                    border-left: 15px solid transparent;
+                    border-right: 15px solid transparent;
+                    border-bottom: 25px solid #322ffd;
+                    margin: auto;
+                }
+            </style>
+            <div class="triangle"></div>
+        </section>
+        <section class="element-container__title">
+            ${title}
+        </section>
+    </section>
+</template>
