@@ -1,7 +1,10 @@
-<template class="drop-zone" >
+<template class="droppable ${emptyElement ? 'drop-zone': ''}" >
     <require from="./element-container.css"></require>
 
-    <section class="element-container">
+    <section class="element-container" if.bind="emptyElement">
+        Drag Element Here
+    </section>
+    <section class="element-container" if.bind="!emptyElement">
         <section class="element-container__icon">
             <style>
                 .element-container__icon .triangle {

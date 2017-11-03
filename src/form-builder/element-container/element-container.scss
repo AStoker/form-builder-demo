@@ -1,0 +1,23 @@
+form-builder element-container {
+    &.drop-zone {
+        flex: 1;
+        outline: 1px solid rgb(202, 202, 202);
+        color: #7f7f7f;
+        padding: .5rem;
+        text-align: center;
+    }
+    .element-container {
+        display: flex;
+        height: 3rem;
+        align-items: center;
+    
+        border: 1px solid gray;
+        .element-container__icon {
+            width: 3rem;
+        }
+        .element-container__title {
+            flex: 1;
+        }
+    }       
+
+} 

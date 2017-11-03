@@ -15,7 +15,7 @@ export class ElementCategoriesCustomElement {
     configureDraggable() {
         this._droppable = new Droppable(document.querySelector('.form-builder__container'), {
             draggable: '.element-container',
-            droppable: '.drop-zone'
+            droppable: '.droppable'
         });
         // .on('drag:start', () => console.log('drag:start'))
         // .on('drag:move',  () => console.log('drag:move'))

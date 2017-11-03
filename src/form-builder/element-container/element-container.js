@@ -1,20 +1,34 @@
 import { bindable } from 'aurelia-framework';
 
-import {Droppable} from 'Draggable';
-
 export class ElementContainerCustomElement {
     static inject = [Element];
     @bindable elementType;
 
     constructor(element) {
         this._element = element;
+
+        this.emptyElement = true;
+
         this.title = 'Element';
     }
     attached() {
-        //this.configureDraggable();
     }
 
     bind() {
+        if (!this.elementType) {
+            this.setupDropZone();
+        } else {
+            this.setupElement();
+        }
+    }
+
+    setupDropZone() {
+        this.emptyElement = true;
+    }
+    setupElement() {
+        this.emptyElement = false;
+
         this.title = this.elementType.type;
     }
+
 }
