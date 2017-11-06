@@ -1,11 +1,14 @@
 form-builder element-container {
-    &.drop-zone {
-        flex: 1;
-        outline: 1px solid rgb(202, 202, 202);
+    flex: 1;
+
+    &.draggable-droppable--occupied .element-placeholder{
+        display: none;
+    }
+    .element-placeholder {
         color: #7f7f7f;
-        padding: .5rem;
         text-align: center;
     }
+
     .element-container {
         display: flex;
         height: 3rem;

@@ -15,6 +15,10 @@ export class ElementContainerCustomElement {
     }
 
     bind() {
+        this.elementTypeChanged();
+    }
+
+    elementTypeChanged(newVal) {
         if (!this.elementType) {
             this.setupDropZone();
         } else {
@@ -27,7 +31,6 @@ export class ElementContainerCustomElement {
     }
     setupElement() {
         this.emptyElement = false;
-
         this.title = this.elementType.type;
     }
 

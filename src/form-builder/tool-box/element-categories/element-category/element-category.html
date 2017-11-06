@@ -3,7 +3,7 @@
     <require from="../../../element-container/element-container"></require>
     
     <h2 class="element-category__title">
-        <div click.trigger="collapseCategory(category)">${category.type}</div>
+        <div click.trigger="collapseCategory(category)">${category.name}</div>
     </h2>
     <div class="element-category__list">
         <element-container repeat.for="element of elements" element-type.bind="element"></element-container>

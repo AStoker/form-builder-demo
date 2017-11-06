@@ -1,7 +1,5 @@
 import {bindable} from 'aurelia-framework';
 
-import { Draggable } from 'Draggable';
-
 export class ElementCategoryCustomElement {
     static inject = [Element];
     @bindable category;
@@ -19,20 +17,9 @@ export class ElementCategoryCustomElement {
     }
 
     attached() {
-        //this.configureDraggable();
+
     }
 
-    configureDraggable() {
-        //TODO: move draggable to element-type
-        this._draggable = new Draggable(this._element, {
-            draggable: '.element-type'
-        });
-        // .on('drag:start', () => {
-        //     console.log('drag:start');
-        // })
-        // .on('drag:move',  () => console.log('drag:move'))
-        // .on('drag:stop',  () => console.log('drag:stop'));
-    }
     collapseCategory(category) {
         let catIndex = this._collapsedCategories.indexOf(category);
         if (catIndex) {
