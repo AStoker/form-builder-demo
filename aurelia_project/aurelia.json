@@ -57,6 +57,7 @@
           "aurelia-task-queue",
           "aurelia-templating",
           "aurelia-templating-binding",
+          "node-uuid",
           {
             "name": "Draggable",
             "path": "../node_modules/@shopify/draggable/lib",

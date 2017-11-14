@@ -1,9 +1,11 @@
-<template class="form-row">
+<template class="form-row droppable">
     <require from="./form-row.css"></require>
     <require from="../../element-container/element-container"></require>
 
     <section class="form-row__columns">
-        <element-container></element-container>
+        <element-container 
+            repeat.for="elem of elements" 
+        ></element-container>
     </section>
 
 </template>

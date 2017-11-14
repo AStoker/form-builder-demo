@@ -21,6 +21,12 @@ form-builder element-container {
         .element-container__title {
             flex: 1;
         }
-    }       
+    }    
+    &.droppable {
+        .element-container.draggable--over{
+            border: 1px solid red;
+            
+        }
+    }
 
 } 

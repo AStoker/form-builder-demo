@@ -19,7 +19,7 @@
     normalize-path "^2.0.1"
     through2 "^2.0.3"
 
-"@shopify/draggable@^1.0.0-beta.3":
+"@shopify/draggable@^1.0.0-beta.4":
   version "1.0.0-beta.3"
   resolved "https://registry.yarnpkg.com/@shopify/draggable/-/draggable-1.0.0-beta.3.tgz#b207effa1b85d31efbe1c3d8d40d785a2cb100c4"
 
@@ -3709,7 +3709,7 @@ node-sass@^4.2.0:
     sass-graph "^2.1.1"
     stdout-stream "^1.4.0"
 
-node-uuid@~1.4.7:
+node-uuid@^1.4.8, node-uuid@~1.4.7:
   version "1.4.8"
   resolved "https://registry.yarnpkg.com/node-uuid/-/node-uuid-1.4.8.tgz#b040eb0923968afabf8d32fb1f17f1167fdab907"
 

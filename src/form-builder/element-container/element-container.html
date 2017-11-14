@@ -1,4 +1,4 @@
-<template class="droppable" >
+<template>
     <require from="./element-container.css"></require>
 
     <section class="element-container element-placeholder" if.bind="emptyElement">
@@ -6,7 +6,7 @@
             Drag Element Here
         </section>
     </section>
-    <section class="element-container" if.bind="!emptyElement" data-element-type-code.bind="elementTypeCode">
+    <section class="element-container" if.bind="!emptyElement">
         <section class="element-container__icon">
             <style>
                 .element-container__icon .triangle {

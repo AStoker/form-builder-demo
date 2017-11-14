@@ -1,43 +1,17 @@
-import {Container} from 'aurelia-framework';
-import {EventAggregator} from 'aurelia-event-aggregator';
 
-import {Droppable} from 'Draggable';
+import { FormTemplateManager } from 'form-builder/FormTemplateManager';
+
 
 export class FormBuilderCustomElement {
-    static inject = [Container];
+    static inject = [FormTemplateManager];
 
-    constructor(container) {
-        this._eventAggregator = new EventAggregator();
-        container.registerInstance('FormBuilderEventAggregator', this._eventAggregator);
+    constructor(formTemplateManager) {
+        this._formTemplateManager = formTemplateManager;
     }
 
     attached() {
-        this.configureDraggable();
+        this._formTemplateManager.set(this.formViewspace);
+        this._formTemplateManager.configureDraggable(this.container);
     }
 
-    configureDraggable() {
-        this._droppable = new Droppable(this.container, {
-            draggable: '.element-container',
-            droppable: '.droppable'
-        })
-        .on('drag:start', (ev) => {
-            this._eventAggregator.publish(`FormBuilder:${ev.type}`, ev);
-        })
-        .on('drag:stop',  (ev) => {
-            if (ev.source.parentElement !== ev.originalSource.parentElement) { //Only do magic if we've dropped on something valid
-                let sourceType = ev.originalSource.parentElement.au.controller.viewModel.elementType;
-                let container = ev.source.parentElement;
-                let containerVM = container.au.controller.viewModel;
-
-                containerVM.elementType = sourceType;
-                this._eventAggregator.publish(`FormBuilder:${ev.type}`, ev);
-            }
-        })
-        .on('droppable:over',   (ev) => {
-            this._eventAggregator.publish(`FormBuilder:${ev.type}`, ev);
-        })
-        .on('droppable:out',    (ev) => {
-            this._eventAggregator.publish(`FormBuilder:${ev.type}`, ev);
-        });
-    }
 }
